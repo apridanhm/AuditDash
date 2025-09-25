@@ -20,3 +20,7 @@ file /usr/local/bin/audit2http.sh ini berfungsi untuk hit webhook dahbord yang k
 dengan mengubahnya dlu sesuai format yang di konfigurasi di script ini.setelah dibuat kasih hak eksekusi "sudo chmod +x /usr/local/bin/audit2http.sh" (ada contohnya di repo)  
 ### kedua : 
 file /etc/audit/plugins.d/http-audit.conf file ini adalah file conf plugin dari auditd. (ada contohnya di repo)
+
+### alasan kenapa ini dibuat
+sering ada slot gacor di hosting yang mereka terkadang menubah ubah file hostingnya jadi muncul slot gacor sialan yang terkadang suka bikin jengkel
+maka dengan adanya ini perubahan file dapat dipantau.
