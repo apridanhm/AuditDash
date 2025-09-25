@@ -21,7 +21,7 @@ dengan mengubahnya dlu sesuai format yang di konfigurasi di script ini.setelah d
 ### kedua : 
 file /etc/audit/plugins.d/http-audit.conf file ini adalah file conf plugin dari auditd. (ada contohnya di repo)
 ### ketiga :
-buat rules dir mana saja yang akan di monitor lihat di sini doc membuat rules nya berkut reff nya : https://sematext.com/glossary/auditd/
+buat rules dir mana saja yang akan di monitor lihat di sini doc membuat rules nya berkut reff nya : https://sematext.com/glossary/auditd/  conf nya biasa di dir /etc/audit/rules.d
 ### alasan kenapa ini dibuat
 sering ada slot gacor di hosting yang mereka terkadang menubah ubah file hostingnya jadi muncul slot gacor sialan yang terkadang suka bikin jengkel
 maka dengan adanya ini perubahan file dapat dipantau.
