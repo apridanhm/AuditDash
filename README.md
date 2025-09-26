@@ -27,4 +27,8 @@ sering ada slot gacor di hosting yang mereka terkadang menubah ubah file hosting
 maka dengan adanya ini perubahan file dapat dipantau.
 
 #### note :
-jika gak muncul di dashbord cek parser di audit2http.sh kadang perlu penyesuaian tergantung versi os yang dipakai
+1. jika gak muncul di dashbord cek parser di audit2http.sh kadang perlu penyesuaian tergantung versi os yang dipakai
+2. jika log penuh hapus dengan:
+    - sudo truncate -s 0 /var/log/audit2http.log /var/log/audit2http.raw
+    - sudo systemctl kill -s SIGUSR1 auditd && sudo truncate -s 0 /var/log/audit/audit.log
+    - atau = sudo rm -f /var/log/audit2http.log /var/log/audit2http.raw && sudo systemctl restart auditd
