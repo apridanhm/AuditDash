@@ -14,7 +14,7 @@ verifikasi :
 #### SELECT id, username, LENGTH(password_hash) AS hash_len FROM users;
 
 ## kemudian jangan lupa pasang auditd di host yang ingin di pantau 
-ada 3 file penting yang perlu dipasang di host yang akan dipantau
+ada 3 file penting yang perlu dipasang di host yang akan dipantau  install juga pluginnya : sudo apt install auditd audispd-plugins -y
 ### pertama : 
 file /usr/local/bin/audit2http.sh ini berfungsi untuk hit webhook dahbord yang kana mengirimkan log dari auditd ke dashbord, 
 dengan mengubahnya dlu sesuai format yang di konfigurasi di script ini.setelah dibuat kasih hak eksekusi "sudo chmod +x /usr/local/bin/audit2http.sh" (ada contohnya di repo)  
@@ -25,3 +25,6 @@ buat rules dir mana saja yang akan di monitor lihat di sini doc membuat rules ny
 ### alasan kenapa ini dibuat
 sering ada slot gacor di hosting yang mereka terkadang menubah ubah file hostingnya jadi muncul slot gacor sialan yang terkadang suka bikin jengkel
 maka dengan adanya ini perubahan file dapat dipantau.
+
+#### note :
+jika gak muncul di dashbord cek parser di audit2http.sh kadang perlu penyesuaian tergantung versi os yang dipakai
